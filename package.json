@@ -1,0 +1,59 @@
+{
+  "name": "tradeweb",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react": "^11.2.3",
+    "@testing-library/user-event": "^12.6.0",
+    "antd": "^4.14.0",
+    "axios": "^0.21.1",
+    "express": "^4.17.1",
+    "express-favicon": "^2.0.1",
+    "lightweight-charts": "^3.3.0",
+    "moment-timezone": "^0.5.33",
+    "react": "^17.0.1",
+    "react-bootstrap": "^1.5.1",
+    "react-bootstrap-icons": "^1.4.0",
+    "react-copy-to-clipboard": "^5.0.3",
+    "react-dom": "^17.0.1",
+    "react-favicon": "^0.0.21",
+    "react-helmet": "^6.1.0",
+    "react-moment": "^1.1.1",
+    "react-number-format": "^4.5.3",
+    "react-router-dom": "^5.2.0",
+    "react-script-tag": "^1.1.2",
+    "react-scripts": "4.0.1",
+    "react-select": "^4.3.0",
+    "react-select-country-list": "^2.2.3",
+    "react-switch": "^6.0.0",
+    "react-tradingview-widget": "^1.3.2",
+    "typekit": "^0.1.1",
+    "web-vitals": "^0.2.4"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "start:dev": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

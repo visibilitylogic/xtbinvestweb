@@ -1,0 +1,303 @@
+
+.btn.btn-primary.btn-support {
+    padding: 3px 10px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    background: rgb(219 73 49);
+    border: 1px solid rgb(219 73 49);
+}
+.foot p {
+    color: rgb(133, 137, 144);
+    font-size: 13px;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+.footer-right svg {
+    color: rgb(133, 137, 144);
+    width: 1.2em;
+    height: 1.2em;
+    margin-top: -4px;
+}
+.footer-right span,
+.footer-right svg:hover {
+    color: #fff;
+}
+.footer-right .fullscreen {
+    width: 1em;
+    height: 1em;
+}
+.tooltip-inner {
+    background-color: rgb(80, 88, 110)!important;
+}
+
+
+.btn.btn-primary.btn-support {
+    padding: 7px 30px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    background: rgb(219 73 49);
+    border: 1px solid rgb(219 73 49);
+}
+
+.foot p {
+    color: rgb(133, 137, 144);
+    font-size: 15px;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+
+.foot {
+    background: #151a25;
+    padding: 5px;
+    margin-top: 2.5%;
+    position: absolute;
+    width: 100%;
+}
+
+
+.btn.btn-primary.btn-support {
+    padding: 5.3px 25px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    background: rgb(219 73 49);
+    border: 1px solid rgb(219 73 49);
+}
+
+.foot p {
+    color: rgb(133, 137, 144);
+    font-size: 11px;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+.btn.btn-primary.btn-support {
+    padding: 3.3px 15px;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    background: rgb(219 73 49);
+    border: 1px solid rgb(219 73 49);
+}
+
+.foot {
+    background: #1d2435;
+    padding: 5px;
+    position: absolute;
+    width: 100%;
+    z-index: 9999;
+
+}
+
+
+.dash-contents .details .watchlist {
+    background-color: transparent;
+    overflow-y: hidden;
+    border-bottom: none;
+    color: white;
+}
+
+@media screen and (max-width: 800px) {
+    .dash-contents .details {
+      display: none !important;
+    }
+    .trade .dash-row {
+      display: flex;
+    }
+    .dash-contents .sidebar {
+      background-color: #131722;
+      width: 18%;
+      height: 100vh;
+      overflow-y: auto;
+    }
+    .dash-contents .trade .chart {
+      height: 85vh;
+    }
+  
+    .dash-contents .trade .trade-action {
+      /* display: flex; */
+      /* margin-top: -28%; */
+      /* display: flex; */
+      height: 70vh;
+      /* display: flex; */
+      width: 28%;
+    }
+    .dash-contents .market {
+      transition: 0.25s;
+      background-color: #131722;
+      width: 82%;
+      height: 100vh;
+      position: relative;
+      overflow-y: hidden;
+    }
+    .dash-contents .trade .trade-action .trade-amount .trade-amount-add {
+      width: 100%;
+      text-align: center;
+      padding: 5px 10px;
+      height: 30px;
+      position: relative;
+      cursor: pointer;
+      border-top: 2px solid #131722;
+      border-left: 1px solid #131722;
+    }
+  
+    .dash-contents .trade .trade-action .trade-amount .trade-amount-minus {
+      width: 100%;
+      text-align: center;
+      padding: 5px 10px;
+      height: 30px;
+      border-top: 2px solid #131722;
+      border-right: 1px solid #131722;
+      position: relative;
+      cursor: pointer;
+    }
+    .dash-contents .trade .chart {
+      height: 85vh;
+      width: calc(100% - 125px);
+      width: -webkit-calc(100% - 87px);
+    }
+    .switish1 {
+      display: flex;
+      height: 4ch;
+      width: 15rem;
+      margin-left: 5%;
+      margin-top: -5%;
+    }
+    .credit h5 {
+      white-space: normal !important;
+    }
+    .actions h5 {
+      white-space: normal !important;
+    }
+    .actions1 h5 {
+      white-space: normal !important;
+    }
+    .navbar {
+      background-color: #1a202d;
+   
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .navbar-nav .d-flex {
+      display: -ms-flexbox !important;
+      display: flex !important;
+      overflow: auto;
+    }
+  
+    .navbar-brand {
+      display: inline-block;
+      padding-top: 0.3125rem;
+      padding-bottom: 0.3125rem;
+      margin-right: 0.5rem !important;
+      font-size: 1.25rem;
+      line-height: inherit;
+      white-space: nowrap;
+      width: 28% !important;
+    }
+    .stock-box .d-flex {
+      display: flex !important;
+      overflow: visible;
+    }
+  
+    .sell-option {
+      border-radius: 5px;
+      max-width: 300px;
+      width: 75%;
+      height: 536px;
+      background-color: #131722;
+      position: fixed;
+      z-index: 500;
+      overflow-y: auto;
+      top: 50%;
+      right: 81px;
+      transform: translateY(-50%);
+      border: 1px solid #fff;
+      padding: 10px 10px;
+      display: none;
+      overflow: hidden;
+    }
+  
+    .buy-option {
+      border-radius: 5px;
+      max-width: 300px;
+      width: 75%;
+      height: 536px;
+      background-color: #131722;
+      position: fixed;
+      z-index: 500;
+      overflow-y: auto;
+      top: 50%;
+      right: 81px;
+      transform: translateY(-50%);
+      border: 1px solid #fff;
+      padding: 10px 10px;
+      display: none;
+      overflow: hidden;
+    }
+    .foot p {
+      color: rgb(133, 137, 144);
+      font-size: 5px;
+      text-transform: uppercase;
+      margin-bottom: 0;
+    }
+    .dash-contents
+      .trade
+      .trade-action
+      .trade-amount
+      .trade-amount-input
+      .amount {
+      display: flex;
+      font-size: 15px;
+      margin-top: 0px !important;
+    }
+    .dash-contents .trade .trade-action .actions1 .buy,
+    .dash-contents .trade .trade-action .actions1 .sell,
+    .dash-contents .trade .trade-action .actions .buy,
+    .dash-contents .trade .trade-action .actions .sell {
+      height: 45px;
+    }
+    .dash-contents .order {
+      position: fixed;
+      overflow: hidden;
+      width: 82%;
+      height: 8vh;
+      background-color: #131722;
+      right: 0;
+      bottom: 0;
+      z-index: 200;
+      padding: 15px 0;
+      border-top: 5px solid #1d2435;
+    }
+    .dash-contents .trade .chart {
+      height: 85vh;
+      width: calc(100% - 125px);
+      width: -webkit-calc(100% - 96px) !important;
+    }
+  
+    .support-modal {
+      height: auto !important;
+      width: 96%;
+      padding-left: 8%;
+    }
+  
+    .notification-box {
+      position: absolute;
+      width: 300px;
+      padding: 15px 15px;
+      right: 0;
+      top: 50px;
+      /* width: 100%; */
+      border-radius: 5px;
+      height: 450px;
+      background-color: #fff;
+      overflow-y: auto;
+      z-index: 500;
+      display: none;
+      margin-right: 18%;
+      margin-top: 50%;
+    }
+  }
+  
