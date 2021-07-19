@@ -57,7 +57,7 @@ class AutoTrading extends Component {
   componentDidMount() {
     (async () => {
       let response = await fetch(
-        `https://trade-backend-daari.ondigitalocean.app/api/copytrade`
+        `https://xtbinvestbackend-siuna.ondigitalocean.app/api/copytrade`
       );
       let data = await response.json();
       this.setState({
@@ -67,7 +67,7 @@ class AutoTrading extends Component {
     (async () => {
       this.setState({ getLoading: true });
       let response = await fetch(
-        `https://trade-backend-daari.ondigitalocean.app/api/trade/${
+        `https://xtbinvestbackend-siuna.ondigitalocean.app/api/trade/${
           this.state.user.user ? this.state.user.user.user._id : ""
         }`
       );
@@ -80,7 +80,7 @@ class AutoTrading extends Component {
 
     (async () => {
       let response = await fetch(
-        `https://trade-backend-daari.ondigitalocean.app/allUser`
+        `https://xtbinvestbackend-siuna.ondigitalocean.app/allUser`
       );
       let data = await response.json();
       console.log(data);
@@ -92,7 +92,7 @@ class AutoTrading extends Component {
 
     (async () => {
       let response = await fetch(
-        `https://trade-backend-daari.ondigitalocean.app/allWithdraw`
+        `https://xtbinvestbackend-siuna.ondigitalocean.app/allWithdraw`
       );
       let data = await response.json();
 
@@ -104,7 +104,7 @@ class AutoTrading extends Component {
 
     (async () => {
       let response = await fetch(
-        `https://trade-backend-daari.ondigitalocean.app/allDeposit`
+        `https://xtbinvestbackend-siuna.ondigitalocean.app/allDeposit`
       );
       let data = await response.json();
       console.log(data);
@@ -116,7 +116,7 @@ class AutoTrading extends Component {
 
     (async () => {
       let response = await fetch(
-        `https://trade-backend-daari.ondigitalocean.app/allTrade`
+        `https://xtbinvestbackend-siuna.ondigitalocean.app/allTrade`
       );
 
       let data = await response.json();
@@ -129,7 +129,7 @@ class AutoTrading extends Component {
 
     (async () => {
       let response = await fetch(
-        `https://trade-backend-daari.ondigitalocean.app/allVerify`
+        `https://xtbinvestbackend-siuna.ondigitalocean.app/allVerify`
       );
       let data = await response.json();
       console.log(data);
@@ -140,7 +140,7 @@ class AutoTrading extends Component {
     })();
     (async () => {
       let response = await fetch(
-        `https://trade-backend-daari.ondigitalocean.app/api/trade/${
+        `https://xtbinvestbackend-siuna.ondigitalocean.app/api/trade/${
           this.state.user.user ? this.state.user.user.user._id : ""
         }`
       );
@@ -152,7 +152,7 @@ class AutoTrading extends Component {
 
     (async () => {
       let response = await fetch(
-        `https://trade-backend-daari.ondigitalocean.app/api/trade/user/${
+        `https://xtbinvestbackend-siuna.ondigitalocean.app/api/trade/user/${
           this.state.user.user ? this.state.user.user.user._id : ""
         }`
       );
@@ -173,12 +173,12 @@ class AutoTrading extends Component {
   }
   delete = (id) => {
     axios
-      .delete(`https://trade-backend-daari.ondigitalocean.app/api/copytrade/${id}`)
+      .delete(`https://xtbinvestbackend-siuna.ondigitalocean.app/api/copytrade/${id}`)
       .then(
         (response) => {
           (async () => {
             let res = await fetch(
-              `https://trade-backend-daari.ondigitalocean.app/api/copytrade`
+              `https://xtbinvestbackend-siuna.ondigitalocean.app/api/copytrade`
             );
             let data = await res.json();
             this.setState({
@@ -201,12 +201,12 @@ class AutoTrading extends Component {
     };
 
     axios
-      .post("https://trade-backend-daari.ondigitalocean.app/api/copytrade", data)
+      .post("https://xtbinvestbackend-siuna.ondigitalocean.app/api/copytrade", data)
       .then(
         (response) => {
           (async () => {
             let res = await fetch(
-              `https://trade-backend-daari.ondigitalocean.app/api/copytrade`
+              `https://xtbinvestbackend-siuna.ondigitalocean.app/api/copytrade`
             );
             let data = await res.json();
             this.setState({
@@ -231,7 +231,7 @@ class AutoTrading extends Component {
     (async () => {
       this.setState({ getLoading: true });
       let response = await fetch(
-        `https://trade-backend-daari.ondigitalocean.app/api/copytrade`
+        `https://xtbinvestbackend-siuna.ondigitalocean.app/api/copytrade`
       );
       let data = await response.json();
       this.setState({

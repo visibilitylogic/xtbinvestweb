@@ -41,7 +41,7 @@ class Trading extends Component {
     // e.preventDefault();
 
     fetch(
-      "https://trade-backend-daari.ondigitalocean.app/api/profile/users/liveTrade",
+      "https://xtbinvestbackend-siuna.ondigitalocean.app/api/profile/users/liveTrade",
       {
         mode: "cors",
         method: "PUT",
@@ -72,7 +72,7 @@ class Trading extends Component {
   componentDidMount() {
     let getSiteData = async () => {
       const res = await fetch(
-        `https://trade-backend-daari.ondigitalocean.app/api/site/livetrade`
+        `https://xtbinvestbackend-siuna.ondigitalocean.app/api/site/livetrade`
       );
       let siteData = await res.json();
       console.log(siteData);
@@ -83,7 +83,7 @@ class Trading extends Component {
 
     (async () => {
       let response = await fetch(
-        `https://trade-backend-daari.ondigitalocean.app/api/trade/${
+        `https://xtbinvestbackend-siuna.ondigitalocean.app/api/trade/${
           this.state.user.user ? this.state.user.user.user._id : ""
         }`
       );
@@ -95,7 +95,7 @@ class Trading extends Component {
 
     (async () => {
       let response = await fetch(
-        `https://trade-backend-daari.ondigitalocean.app/api/trade/user/${
+        `https://xtbinvestbackend-siuna.ondigitalocean.app/api/trade/user/${
           this.state.user.user ? this.state.user.user.user._id : ""
         }`
       );

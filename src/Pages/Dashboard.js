@@ -124,7 +124,7 @@ class Dashboard extends Component {
 
     (async () => {
       let response = await fetch(
-        `https://trade-backend-daari.ondigitalocean.app/api/profile/isTrading`,
+        `https://xtbinvestbackend-siuna.ondigitalocean.app/api/profile/isTrading`,
         {
           mode: "cors",
           method: "PUT",
@@ -145,7 +145,7 @@ class Dashboard extends Component {
 
       (async () => {
         let response = await fetch(
-          `https://trade-backend-daari.ondigitalocean.app/api/trade/user/${this.state.user.user.user._id}`
+          `https://xtbinvestbackend-siuna.ondigitalocean.app/api/trade/user/${this.state.user.user.user._id}`
         );
         let user = await response.json();
         this.setState({
@@ -176,7 +176,7 @@ class Dashboard extends Component {
     this.setState({ intervalId });
     (async () => {
       let response = await fetch(
-        `https://trade-backend-daari.ondigitalocean.app/api/trade/${
+        `https://xtbinvestbackend-siuna.ondigitalocean.app/api/trade/${
           this.state.user.user ? this.state.user.user.user._id : ""
         }`
       );
@@ -192,7 +192,7 @@ class Dashboard extends Component {
 
     (async () => {
       let response = await fetch(
-        `https://trade-backend-daari.ondigitalocean.app/api/autocopytrade/user/${
+        `https://xtbinvestbackend-siuna.ondigitalocean.app/api/autocopytrade/user/${
           this.state.user.user ? this.state.user.user.user._id : ""
         }`
       );
@@ -208,7 +208,7 @@ class Dashboard extends Component {
 
     (async () => {
       let response = await fetch(
-        `https://trade-backend-daari.ondigitalocean.app/api/trade/user/${
+        `https://xtbinvestbackend-siuna.ondigitalocean.app/api/trade/user/${
           this.state.user.user ? this.state.user.user.user._id : ""
         }`
       );
@@ -671,7 +671,7 @@ class Dashboard extends Component {
     localStorage.setItem("total", b);
     (async () => {
       let response = await fetch(
-        `https://trade-backend-daari.ondigitalocean.app/api/trade/close/${id}/${amount}/${newAmount}`
+        `https://xtbinvestbackend-siuna.ondigitalocean.app/api/trade/close/${id}/${amount}/${newAmount}`
       );
       let value = id;
 
@@ -701,7 +701,7 @@ class Dashboard extends Component {
     localStorage.setItem("total", b);
     (async () => {
       let response = await fetch(
-        `https://trade-backend-daari.ondigitalocean.app/api/trade/close/${id}/${amount}/${newAmount}`
+        `https://xtbinvestbackend-siuna.ondigitalocean.app/api/trade/close/${id}/${amount}/${newAmount}`
       );
       // let value = id;
 
@@ -725,7 +725,7 @@ class Dashboard extends Component {
   delOrder = (id) => () => {
     (async () => {
       let response = await fetch(
-        `https://trade-backend-daari.ondigitalocean.app/api/trade/del/${id}`
+        `https://xtbinvestbackend-siuna.ondigitalocean.app/api/trade/del/${id}`
       );
       let value = id;
 
@@ -917,7 +917,7 @@ class Dashboard extends Component {
     e.preventDefault();
 
     fetch(
-      `https://trade-backend-daari.ondigitalocean.app/api/trade/${this.state.user.user.user._id}`,
+      `https://xtbinvestbackend-siuna.ondigitalocean.app/api/trade/${this.state.user.user.user._id}`,
       {
         mode: "cors",
         method: "POST",
@@ -959,7 +959,7 @@ class Dashboard extends Component {
     e.preventDefault();
 
     fetch(
-      `https://trade-backend-daari.ondigitalocean.app/api/trade/${this.state.user.user.user._id}`,
+      `https://xtbinvestbackend-siuna.ondigitalocean.app/api/trade/${this.state.user.user.user._id}`,
       {
         mode: "cors",
         method: "POST",
@@ -1005,7 +1005,7 @@ class Dashboard extends Component {
     if (prevState.orders !== this.state.orders) {
       (async () => {
         let response = await fetch(
-          `https://trade-backend-daari.ondigitalocean.app/api/trade/${this.state.user.user.user._id}`
+          `https://xtbinvestbackend-siuna.ondigitalocean.app/api/trade/${this.state.user.user.user._id}`
         );
         let r = await response.json();
 
@@ -1023,7 +1023,7 @@ class Dashboard extends Component {
     if (prevState.history !== this.state.history) {
       (async () => {
         let response = await fetch(
-          `https://trade-backend-daari.ondigitalocean.app/api/autocopytrade/user/${
+          `https://xtbinvestbackend-siuna.ondigitalocean.app/api/autocopytrade/user/${
             this.state.user.user ? this.state.user.user.user._id : ""
           }`
         );
@@ -1040,7 +1040,7 @@ class Dashboard extends Component {
     if (prevState.user !== this.state.user) {
       (async () => {
         let response = await fetch(
-          `https://trade-backend-daari.ondigitalocean.app/api/trade/user/${this.state.user.user.user._id}`
+          `https://xtbinvestbackend-siuna.ondigitalocean.app/api/trade/user/${this.state.user.user.user._id}`
         );
         let user = await response.json();
         this.setState({
@@ -1143,7 +1143,7 @@ class Dashboard extends Component {
       ver5: false,
     });
     fetch(
-      `https://trade-backend-daari.ondigitalocean.app/api/verify/verificationrequest`,
+      `https://xtbinvestbackend-siuna.ondigitalocean.app/api/verify/verificationrequest`,
       {
         mode: "cors",
         method: "POST",
@@ -1193,7 +1193,7 @@ class Dashboard extends Component {
   handleSubmitFile = (e) => {
     e.preventDefault();
     fetch(
-      `https://trade-backend-daari.ondigitalocean.app/api/registration/file/${this.state.user.user.user._id}`,
+      `https://xtbinvestbackend-siuna.ondigitalocean.app/api/registration/file/${this.state.user.user.user._id}`,
       {
         mode: "cors",
         method: "POST",

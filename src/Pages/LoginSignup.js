@@ -7,7 +7,7 @@ import AdminSidebar from "../Component/AdminSidebar";
 import TradingViewWidget, { Themes } from "react-tradingview-widget";
 import {message} from 'antd';
 
-const endpoint="https://trade-backend-daari.ondigitalocean.app"
+const endpoint="https://xtbinvestbackend-siuna.ondigitalocean.app"
 const LoginSIgnup =(props)=> {
   const [user, setUser] = useState(props.user ? props.user : null);
   const [admin, setAdmin] = useState(true);
@@ -128,7 +128,7 @@ useEffect(()=>{
 
   (async () => {
     let response = await fetch(
-      `https://trade-backend-daari.ondigitalocean.app/api/trade/user/${
+      `https://xtbinvestbackend-siuna.ondigitalocean.app/api/trade/user/${
         user.user!== null &&user.user.user? user.user.user._id : ""
       }`
     );

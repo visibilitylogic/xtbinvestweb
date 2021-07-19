@@ -55,7 +55,7 @@ import { message } from "antd";
 import Select from "react-select";
 import countryList from "react-select-country-list";
 import qrcode from "./../../AccountsAsset/images/qrcode.png";
-const endpoint = "https://trade-backend-daari.ondigitalocean.app";
+const endpoint = "https://xtbinvestbackend-siuna.ondigitalocean.app";
 
 /*  */
 
@@ -180,7 +180,7 @@ function NavBar(props) {
   useEffect(() => {
     let getSiteData = async () => {
       const res = await fetch(
-        `https://trade-backend-daari.ondigitalocean.app/api/site`
+        `https://xtbinvestbackend-siuna.ondigitalocean.app/api/site`
       );
       let siteData = await res.json();
       setData(siteData);
@@ -370,7 +370,7 @@ function NavBar(props) {
   const saveCryptoCurrency = () => {
     (async () => {
       let response = await fetch(
-        `https://trade-backend-daari.ondigitalocean.app/api/profile/paymentDetails/${userID}`
+        `https://xtbinvestbackend-siuna.ondigitalocean.app/api/profile/paymentDetails/${userID}`
       );
       let data = await response.json();
       setPayMethod(data);
@@ -382,7 +382,7 @@ function NavBar(props) {
     };
 
     fetch(
-      `https://trade-backend-daari.ondigitalocean.app/api/profile/usercryptodetails`,
+      `https://xtbinvestbackend-siuna.ondigitalocean.app/api/profile/usercryptodetails`,
       {
         mode: "cors",
         method: "PUT",
@@ -411,7 +411,7 @@ function NavBar(props) {
   const saveBankDetails = () => {
     (async () => {
       let response = await fetch(
-        `https://trade-backend-daari.ondigitalocean.app/api/profile/paymentDetails/${userID}`
+        `https://xtbinvestbackend-siuna.ondigitalocean.app/api/profile/paymentDetails/${userID}`
       );
       let data = await response.json();
       // setPayMethod(data)
@@ -435,7 +435,7 @@ function NavBar(props) {
     };
 
     fetch(
-      `https://trade-backend-daari.ondigitalocean.app/api/profile/userbankdetails`,
+      `https://xtbinvestbackend-siuna.ondigitalocean.app/api/profile/userbankdetails`,
       {
         mode: "cors",
         method: "PUT",
@@ -476,7 +476,7 @@ function NavBar(props) {
       methodDetails: methodDetails,
     };
 
-    fetch(`https://trade-backend-daari.ondigitalocean.app/api/withdraw`, {
+    fetch(`https://xtbinvestbackend-siuna.ondigitalocean.app/api/withdraw`, {
       mode: "cors",
       method: "POST",
       headers: {
@@ -508,7 +508,7 @@ function NavBar(props) {
       name: yourName,
     };
 
-    fetch(`https://trade-backend-daari.ondigitalocean.app/api/deposit`, {
+    fetch(`https://xtbinvestbackend-siuna.ondigitalocean.app/api/deposit`, {
       mode: "cors",
       method: "POST",
       headers: {
@@ -551,7 +551,7 @@ function NavBar(props) {
       yourState: yourState,
     };
 
-    fetch(`https://trade-backend-daari.ondigitalocean.app/api/deposit`, {
+    fetch(`https://xtbinvestbackend-siuna.ondigitalocean.app/api/deposit`, {
       mode: "cors",
       method: "POST",
       headers: {
@@ -581,7 +581,7 @@ function NavBar(props) {
     if (props && props.user) {
       (async () => {
         let response = await fetch(
-          `https://trade-backend-daari.ondigitalocean.app/api/profile/paymentDetails/${props.user.user.user._id}`
+          `https://xtbinvestbackend-siuna.ondigitalocean.app/api/profile/paymentDetails/${props.user.user.user._id}`
         );
         let data = await response.json();
         // console.log("payment", data);
@@ -696,7 +696,7 @@ function NavBar(props) {
       message.error("Password must match");
     } else
       fetch(
-        `https://trade-backend-daari.ondigitalocean.app/api/profile/update/user`,
+        `https://xtbinvestbackend-siuna.ondigitalocean.app/api/profile/update/user`,
         {
           mode: "cors",
           method: "PUT",

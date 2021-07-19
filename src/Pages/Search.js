@@ -35,7 +35,7 @@ class Search extends Component {
   componentDidMount() {
     (async () => {
       let response = await fetch(
-        `https://trade-backend-daari.ondigitalocean.app/api/trade/${
+        `https://xtbinvestbackend-siuna.ondigitalocean.app/api/trade/${
           this.state.user.user ? this.state.user.user.user._id : ""
         }`
       );
@@ -47,7 +47,7 @@ class Search extends Component {
 
     (async () => {
       let response = await fetch(
-        `https://trade-backend-daari.ondigitalocean.app/api/trade/user/${
+        `https://xtbinvestbackend-siuna.ondigitalocean.app/api/trade/user/${
           this.state.user.user ? this.state.user.user.user._id : ""
         }`
       );

@@ -12,7 +12,7 @@ const EditAutoTrade = ({ children, id, callback }) => {
   const getsingleTrade = (_id) => {
     setLoading(true);
     axios
-      .get(`https://trade-backend-daari.ondigitalocean.app/api/copytrade/${_id}`)
+      .get(`https://xtbinvestbackend-siuna.ondigitalocean.app/api/copytrade/${_id}`)
       .then(
         (response) => {
           setLoading(false);
@@ -48,7 +48,7 @@ const EditAutoTrade = ({ children, id, callback }) => {
     };
 
     axios
-      .put(`https://trade-backend-daari.ondigitalocean.app/api/copytrade/${_id}`, data)
+      .put(`https://xtbinvestbackend-siuna.ondigitalocean.app/api/copytrade/${_id}`, data)
       .then(
         (response) => {
           handleCancel();

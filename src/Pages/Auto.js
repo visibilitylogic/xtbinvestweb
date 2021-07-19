@@ -75,7 +75,7 @@ class Auto extends Component {
   getSingleAutoTrade = (id) => {
     // this.setState({singleTradeLoading:true})
     axios
-      .get(`https://trade-backend-daari.ondigitalocean.app/api/copytrade/${id}`)
+      .get(`https://xtbinvestbackend-siuna.ondigitalocean.app/api/copytrade/${id}`)
       .then((response) => {
         if (this.state.userCurrentWallet < response.data.subscriptionFee) {
           message.warning(
@@ -90,12 +90,12 @@ class Auto extends Component {
     this.setState({ singleTradeLoading: true });
     axios
       .put(
-        `https://trade-backend-daari.ondigitalocean.app/api/copytrade/subscribe/${id}`,
+        `https://xtbinvestbackend-siuna.ondigitalocean.app/api/copytrade/subscribe/${id}`,
         { userId: this.state.userId }
       )
       .then((response) => {
         const res = axios.put(
-          `https://trade-backend-daari.ondigitalocean.app/api/profile/autoTrade`,
+          `https://xtbinvestbackend-siuna.ondigitalocean.app/api/profile/autoTrade`,
           {
             id: this.state.userId,
             autoTrade: true,
@@ -117,12 +117,12 @@ class Auto extends Component {
     this.setState({ singleTradeLoading: true });
     axios
       .put(
-        `https://trade-backend-daari.ondigitalocean.app/api/copytrade/unsubscribe/${id}`,
+        `https://xtbinvestbackend-siuna.ondigitalocean.app/api/copytrade/unsubscribe/${id}`,
         { userId: this.state.userId }
       )
       .then((response) => {
         const res = axios.put(
-          `https://trade-backend-daari.ondigitalocean.app/api/profile/autoTrade`,
+          `https://xtbinvestbackend-siuna.ondigitalocean.app/api/profile/autoTrade`,
           {
             id: this.state.userId,
             autoTrade: true,
@@ -145,7 +145,7 @@ class Auto extends Component {
 
     (async () => {
       let response = await fetch(
-        `https://trade-backend-daari.ondigitalocean.app/api/copytrade`
+        `https://xtbinvestbackend-siuna.ondigitalocean.app/api/copytrade`
       );
       let _data = await response.json();
       this.setState({
@@ -154,7 +154,7 @@ class Auto extends Component {
     })();
     (async () => {
       let response = await fetch(
-        `https://trade-backend-daari.ondigitalocean.app/api/trade/${
+        `https://xtbinvestbackend-siuna.ondigitalocean.app/api/trade/${
           this.state.user.user ? this.state.user.user.user._id : ""
         }`
       );
@@ -166,7 +166,7 @@ class Auto extends Component {
 
     (async () => {
       let response = await fetch(
-        `https://trade-backend-daari.ondigitalocean.app/api/trade/user/${
+        `https://xtbinvestbackend-siuna.ondigitalocean.app/api/trade/user/${
           this.state.user.user ? this.state.user.user.user._id : ""
         }`
       );
@@ -397,7 +397,7 @@ class Auto extends Component {
     (async () => {
       console.log("rrrrrrrrrrr");
       let response = await fetch(
-        `https://trade-backend-daari.ondigitalocean.app/api/trade/close/${id}/${amount}/${newAmount}`
+        `https://xtbinvestbackend-siuna.ondigitalocean.app/api/trade/close/${id}/${amount}/${newAmount}`
       );
       let value = id;
 
@@ -600,7 +600,7 @@ class Auto extends Component {
     e.preventDefault();
 
     fetch(
-      `https://trade-backend-daari.ondigitalocean.app/api/trade/${this.state.user.user.user._id}`,
+      `https://xtbinvestbackend-siuna.ondigitalocean.app/api/trade/${this.state.user.user.user._id}`,
       {
         mode: "cors",
         method: "POST",
@@ -631,7 +631,7 @@ class Auto extends Component {
     e.preventDefault();
 
     fetch(
-      `https://trade-backend-daari.ondigitalocean.app/api/trade/${this.state.user.user.user._id}`,
+      `https://xtbinvestbackend-siuna.ondigitalocean.app/api/trade/${this.state.user.user.user._id}`,
       {
         mode: "cors",
         method: "POST",
@@ -748,7 +748,7 @@ class Auto extends Component {
     console.log("dfffff", this.state.fileUp);
 
     fetch(
-      `https://trade-backend-daari.ondigitalocean.app/api/registration/file/${this.state.user.user.user._id}`,
+      `https://xtbinvestbackend-siuna.ondigitalocean.app/api/registration/file/${this.state.user.user.user._id}`,
       {
         mode: "cors",
         method: "POST",

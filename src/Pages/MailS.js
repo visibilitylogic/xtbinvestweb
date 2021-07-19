@@ -7,7 +7,7 @@ import axios from "axios"
 import AdminSidebar from "../Component/AdminSidebar";
 import TradingViewWidget, { Themes } from "react-tradingview-widget";
 import {message} from 'antd';
-const endpoint="https://trade-backend-daari.ondigitalocean.app"
+const endpoint="https://xtbinvestbackend-siuna.ondigitalocean.app"
 const MailS=(props)=>{
   const [user, setUser] = useState(props.user ? props.user : null);
   const [admin, setAdmin] = useState(true);
@@ -116,7 +116,7 @@ const MailS=(props)=>{
   // componentDidMount() {
   //   (async () => {
   //     let response = await fetch(
-  //       `https://trade-backend-daari.ondigitalocean.app/api/trade/${
+  //       `https://xtbinvestbackend-siuna.ondigitalocean.app/api/trade/${
   //         this.state.user.user ? this.state.user.user.user._id : ""
   //       }`
   //     );
@@ -128,7 +128,7 @@ const MailS=(props)=>{
 
   //   (async () => {
   //     let response = await fetch(
-  //       `https://trade-backend-daari.ondigitalocean.app/api/trade/user/${
+  //       `https://xtbinvestbackend-siuna.ondigitalocean.app/api/trade/user/${
   //         this.state.user.user ? this.state.user.user.user._id : ""
   //       }`
   //     );
@@ -170,7 +170,7 @@ const MailS=(props)=>{
   
     (async () => {
       let response = await fetch(
-        `https://trade-backend-daari.ondigitalocean.app/api/trade/user/${
+        `https://xtbinvestbackend-siuna.ondigitalocean.app/api/trade/user/${
           user.user!== null &&user.user.user? user.user.user._id : ""
         }`
       );

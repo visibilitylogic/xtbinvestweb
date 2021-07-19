@@ -9,7 +9,7 @@ import TradingViewWidget, { Themes } from "react-tradingview-widget";
 import { Select, message } from "antd";
 import axios from "axios";
 import "antd/dist/antd.css";
-const endpoint = "https://trade-backend-daari.ondigitalocean.app";
+const endpoint = "https://xtbinvestbackend-siuna.ondigitalocean.app";
 
 const GeneralApp = (props) => {
   const [orders, setOrders] = useState();
@@ -74,7 +74,7 @@ const  fav = document.getElementById("favicon");
   useEffect(() => {
     (async () => {
       let response = await fetch(
-        `https://trade-backend-daari.ondigitalocean.app/api/trade/${
+        `https://xtbinvestbackend-siuna.ondigitalocean.app/api/trade/${
           user.user ? user.user.user._id : ""
         }`
       );
@@ -85,7 +85,7 @@ const  fav = document.getElementById("favicon");
 
     (async () => {
       let response = await fetch(
-        `https://trade-backend-daari.ondigitalocean.app/api/trade/user/${
+        `https://xtbinvestbackend-siuna.ondigitalocean.app/api/trade/user/${
           user.user ? user.user.user._id : ""
         }`
       );

@@ -9,7 +9,7 @@ export default function Footer() {
   const [Title, setTitle] = useState("");
 
   useEffect(() => {
-    axios.get("https://trade-backend-daari.ondigitalocean.app/api/site").then(
+    axios.get("https://xtbinvestbackend-siuna.ondigitalocean.app/api/site").then(
       (res) => {
         settermsOfServicesLink(res.data.termsOfServicesLink);
         setprivacyPolicyLink(res.data.privacyPolicyLink);

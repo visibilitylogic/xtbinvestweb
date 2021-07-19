@@ -51,7 +51,7 @@ class Admin extends Component {
 
     (async () => {
       let response = await fetch(
-        `https://trade-backend-daari.ondigitalocean.app/api/trade/${
+        `https://xtbinvestbackend-siuna.ondigitalocean.app/api/trade/${
           this.state.user.user ? this.state.user.user.user._id : ""
         }`
       );
@@ -62,7 +62,7 @@ class Admin extends Component {
     })();
 
     (async () => {
-      let response = await fetch(`https://trade-backend-daari.ondigitalocean.app/allUser`);
+      let response = await fetch(`https://xtbinvestbackend-siuna.ondigitalocean.app/allUser`);
       let data = await response.json();
       console.log(data);
 
@@ -72,7 +72,7 @@ class Admin extends Component {
     })();
 
     (async () => {
-      let response = await fetch(`https://trade-backend-daari.ondigitalocean.app/allWithdraw`);
+      let response = await fetch(`https://xtbinvestbackend-siuna.ondigitalocean.app/allWithdraw`);
       let data = await response.json();
 
       console.log(data);
@@ -82,7 +82,7 @@ class Admin extends Component {
     })();
 
     (async () => {
-      let response = await fetch(`https://trade-backend-daari.ondigitalocean.app/allDeposit`);
+      let response = await fetch(`https://xtbinvestbackend-siuna.ondigitalocean.app/allDeposit`);
       let data = await response.json();
       console.log(data);
 
@@ -92,7 +92,7 @@ class Admin extends Component {
     })();
 
     (async () => {
-      let response = await fetch(`https://trade-backend-daari.ondigitalocean.app/allTrade`);
+      let response = await fetch(`https://xtbinvestbackend-siuna.ondigitalocean.app/allTrade`);
 
       let data = await response.json();
       console.log(data);
@@ -103,7 +103,7 @@ class Admin extends Component {
     })();
 
     (async () => {
-      let response = await fetch(`https://trade-backend-daari.ondigitalocean.app/allVerify`);
+      let response = await fetch(`https://xtbinvestbackend-siuna.ondigitalocean.app/allVerify`);
       let data = await response.json();
       console.log(data);
 
@@ -113,7 +113,7 @@ class Admin extends Component {
     })();
     (async () => {
       let response = await fetch(
-        `https://trade-backend-daari.ondigitalocean.app/api/trade/${
+        `https://xtbinvestbackend-siuna.ondigitalocean.app/api/trade/${
           this.state.user.user ? this.state.user.user.user._id : ""
         }`
       );
@@ -125,7 +125,7 @@ class Admin extends Component {
 
     (async () => {
       let response = await fetch(
-        `https://trade-backend-daari.ondigitalocean.app/api/trade/user/${
+        `https://xtbinvestbackend-siuna.ondigitalocean.app/api/trade/user/${
           this.state.user.user ? this.state.user.user.user._id : ""
         }`
       );

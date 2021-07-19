@@ -118,14 +118,14 @@ class Manager extends Component {
   callBackAutoTrade = (_id) => {
     (async () => {
       let res = await fetch(
-        `https://trade-backend-daari.ondigitalocean.app/api/autocopytrade/${_id}`
+        `https://xtbinvestbackend-siuna.ondigitalocean.app/api/autocopytrade/${_id}`
       );
       let _data = await res.json();
       this.setState({ userAutoCopyTradedata: _data });
     })();
     (async () => {
       let response = await fetch(
-        `https://trade-backend-daari.ondigitalocean.app/api/trade/user/${this.state.user.user.user._id}`
+        `https://xtbinvestbackend-siuna.ondigitalocean.app/api/trade/user/${this.state.user.user.user._id}`
       );
       let user = await response.json();
       this.setState({
@@ -140,7 +140,7 @@ class Manager extends Component {
     this.setState({ deleteLoading: true });
     axios
       .delete(
-        `https://trade-backend-daari.ondigitalocean.app/api/autocopytrade/${id}`
+        `https://xtbinvestbackend-siuna.ondigitalocean.app/api/autocopytrade/${id}`
       )
       .then(
         (response) => {
@@ -166,7 +166,7 @@ class Manager extends Component {
     };
     axios
       .post(
-        "https://trade-backend-daari.ondigitalocean.app/api/autocopytrade",
+        "https://xtbinvestbackend-siuna.ondigitalocean.app/api/autocopytrade",
         payload
       )
       .then(
@@ -183,7 +183,7 @@ class Manager extends Component {
           message.success("successfully added auto-trade");
           (async () => {
             let response = await fetch(
-              `https://trade-backend-daari.ondigitalocean.app/api/trade/user/${this.state.user.user.user._id}`
+              `https://xtbinvestbackend-siuna.ondigitalocean.app/api/trade/user/${this.state.user.user.user._id}`
             );
             let user = await response.json();
             this.setState({
@@ -195,7 +195,7 @@ class Manager extends Component {
           })();
           (async () => {
             let response = await fetch(
-              `https://trade-backend-daari.ondigitalocean.app/api/trade/user/${this.state.userId._id}`
+              `https://xtbinvestbackend-siuna.ondigitalocean.app/api/trade/user/${this.state.userId._id}`
             );
             let userId = await response.json();
             this.setState({
@@ -245,7 +245,7 @@ class Manager extends Component {
 
     (async () => {
       let response = await fetch(
-        `https://trade-backend-daari.ondigitalocean.app/api/trade/desposit${
+        `https://xtbinvestbackend-siuna.ondigitalocean.app/api/trade/desposit${
           this.state.userId ? this.state.userId._id : ""
         }`
       );
@@ -328,7 +328,7 @@ class Manager extends Component {
     });
     (async () => {
       let response = await fetch(
-        `https://trade-backend-daari.ondigitalocean.app/api/trade/user/${this.state.user.user.user._id}`
+        `https://xtbinvestbackend-siuna.ondigitalocean.app/api/trade/user/${this.state.user.user.user._id}`
       );
       let user = await response.json();
       this.setState({
@@ -353,7 +353,7 @@ class Manager extends Component {
       this.setState({ text: "Updating..." });
       console.log(this.state.userId._id, this.state.amount, this.state.credit);
       fetch(
-        ` https://trade-backend-daari.ondigitalocean.app/api/profile/CreditDebitAmount`,
+        ` https://xtbinvestbackend-siuna.ondigitalocean.app/api/profile/CreditDebitAmount`,
         {
           mode: "cors",
           method: "PUT",
@@ -381,7 +381,7 @@ class Manager extends Component {
     // .then((data) => {
     //   (async () => {
     //     let response = await fetch(
-    //       `https://trade-backend-daari.ondigitalocean.app/api/trade/user/${this.state.user.user.user._id}`
+    //       `https://xtbinvestbackend-siuna.ondigitalocean.app/api/trade/user/${this.state.user.user.user._id}`
     //     );
     //     let user = await response.json();
     //     this.setState({
@@ -393,7 +393,7 @@ class Manager extends Component {
     //   })();
     //   (async () => {
     //     let response = await fetch(
-    //       `https://trade-backend-daari.ondigitalocean.app/api/trade/user/${this.state.userId._id}`
+    //       `https://xtbinvestbackend-siuna.ondigitalocean.app/api/trade/user/${this.state.userId._id}`
     //     );
     //     let userId = await response.json();
     //     this.setState({
@@ -408,7 +408,7 @@ class Manager extends Component {
 
     //   (async () => {
     //     let response = await fetch(
-    //       `https://trade-backend-daari.ondigitalocean.app/api/trade/user/${this.state.userId._id}`
+    //       `https://xtbinvestbackend-siuna.ondigitalocean.app/api/trade/user/${this.state.userId._id}`
     //     );
     //     let userId = await response.json();
     //     this.setState({
@@ -435,7 +435,7 @@ class Manager extends Component {
 
     // const fetchProfile = async () => {
     //   let response = await axios.get(
-    //     `https://trade-backend-daari.ondigitalocean.app/api/profile/single/${this.state.user.user.user._id}`
+    //     `https://xtbinvestbackend-siuna.ondigitalocean.app/api/profile/single/${this.state.user.user.user._id}`
     //   );
     //   let user = await response.json();
     //   this.setState({
@@ -448,7 +448,7 @@ class Manager extends Component {
     // };
 
     fetch(
-      `https://trade-backend-daari.ondigitalocean.app/api/profile/liveTrade`,
+      `https://xtbinvestbackend-siuna.ondigitalocean.app/api/profile/liveTrade`,
       {
         method: "PUT",
         mode: "cors",
@@ -480,7 +480,7 @@ class Manager extends Component {
       message.error("Password must match");
     } else {
       fetch(
-        `https://trade-backend-daari.ondigitalocean.app/api/profile/update/user`,
+        `https://xtbinvestbackend-siuna.ondigitalocean.app/api/profile/update/user`,
         {
           mode: "cors",
           method: "PUT",
@@ -509,7 +509,7 @@ class Manager extends Component {
   editUserProfile = (id) => {
     this.runPass(id);
 
-    fetch(`https://trade-backend-daari.ondigitalocean.app/api/profile/update`, {
+    fetch(`https://xtbinvestbackend-siuna.ondigitalocean.app/api/profile/update`, {
       mode: "cors",
       method: "PUT",
       headers: {
@@ -534,7 +534,7 @@ class Manager extends Component {
   };
 
   declineVerify = (id, dmessage) => {
-    fetch(`https://trade-backend-daari.ondigitalocean.app/api/verify/decline`, {
+    fetch(`https://xtbinvestbackend-siuna.ondigitalocean.app/api/verify/decline`, {
       mode: "cors",
       method: "PUT",
       headers: {
@@ -551,7 +551,7 @@ class Manager extends Component {
     this.setState({ decline: false });
   };
   approveVerify = (id) => {
-    fetch(`https://trade-backend-daari.ondigitalocean.app/api/verify/approve`, {
+    fetch(`https://xtbinvestbackend-siuna.ondigitalocean.app/api/verify/approve`, {
       mode: "cors",
       method: "PUT",
       headers: {
@@ -571,7 +571,7 @@ class Manager extends Component {
 
   declineWithrawal = (id) => {
     fetch(
-      `https://trade-backend-daari.ondigitalocean.app/api/withdraw/decline`,
+      `https://xtbinvestbackend-siuna.ondigitalocean.app/api/withdraw/decline`,
       {
         mode: "cors",
         method: "PUT",
@@ -593,7 +593,7 @@ class Manager extends Component {
 
   approveWithrawal = (id) => {
     fetch(
-      `https://trade-backend-daari.ondigitalocean.app/api/withdraw/approve`,
+      `https://xtbinvestbackend-siuna.ondigitalocean.app/api/withdraw/approve`,
       {
         mode: "cors",
         method: "PUT",
@@ -612,7 +612,7 @@ class Manager extends Component {
       } else message.error("withdrawal approval was not successfull");
       (async () => {
         let response = await fetch(
-          `https://trade-backend-daari.ondigitalocean.app/api/trade/user/${this.state.user.user.user._id}`
+          `https://xtbinvestbackend-siuna.ondigitalocean.app/api/trade/user/${this.state.user.user.user._id}`
         );
         let user = await response.json();
         this.setState({
@@ -627,7 +627,7 @@ class Manager extends Component {
 
   declineDeposit = (id) => {
     fetch(
-      `https://trade-backend-daari.ondigitalocean.app/api/deposit/decline`,
+      `https://xtbinvestbackend-siuna.ondigitalocean.app/api/deposit/decline`,
       {
         mode: "cors",
         method: "PUT",
@@ -649,7 +649,7 @@ class Manager extends Component {
 
   approveDeposit = (id) => {
     fetch(
-      `https://trade-backend-daari.ondigitalocean.app/api/deposit/approve`,
+      `https://xtbinvestbackend-siuna.ondigitalocean.app/api/deposit/approve`,
       {
         mode: "cors",
         method: "PUT",
@@ -668,7 +668,7 @@ class Manager extends Component {
       } else message.error("deposit approval was not successfull");
       (async () => {
         let response = await fetch(
-          `https://trade-backend-daari.ondigitalocean.app/api/trade/user/${this.state.user.user.user._id}`
+          `https://xtbinvestbackend-siuna.ondigitalocean.app/api/trade/user/${this.state.user.user.user._id}`
         );
         let user = await response.json();
         this.setState({
@@ -682,7 +682,7 @@ class Manager extends Component {
   };
   makeAdmin = (id) => {
     fetch(
-      `https://trade-backend-daari.ondigitalocean.app/api/users/makeAdmin`,
+      `https://xtbinvestbackend-siuna.ondigitalocean.app/api/users/makeAdmin`,
       {
         mode: "cors",
         method: "PUT",
@@ -701,7 +701,7 @@ class Manager extends Component {
 
   makeManager = (id) => {
     fetch(
-      `https://trade-backend-daari.ondigitalocean.app/api/users/makeManager`,
+      `https://xtbinvestbackend-siuna.ondigitalocean.app/api/users/makeManager`,
       {
         mode: "cors",
         method: "PUT",
@@ -720,7 +720,7 @@ class Manager extends Component {
 
   removeManager = (id) => {
     fetch(
-      `https://trade-backend-daari.ondigitalocean.app/api/users/removeManager`,
+      `https://xtbinvestbackend-siuna.ondigitalocean.app/api/users/removeManager`,
       {
         mode: "cors",
         method: "PUT",
@@ -739,7 +739,7 @@ class Manager extends Component {
 
   removeAdmin = (id) => {
     fetch(
-      `https://trade-backend-daari.ondigitalocean.app/api/users/removeAdmin`,
+      `https://xtbinvestbackend-siuna.ondigitalocean.app/api/users/removeAdmin`,
       {
         mode: "cors",
         method: "PUT",
@@ -757,7 +757,7 @@ class Manager extends Component {
   };
 
   deleteUser = (id) => {
-    fetch(`https://trade-backend-daari.ondigitalocean.app/api/users/remove`, {
+    fetch(`https://xtbinvestbackend-siuna.ondigitalocean.app/api/users/remove`, {
       mode: "cors",
       method: "DELETE",
       headers: {
@@ -797,7 +797,7 @@ class Manager extends Component {
   componentDidMount() {
     (async () => {
       let response = await fetch(
-        `https://trade-backend-daari.ondigitalocean.app/api/withdraw/AllHistory`
+        `https://xtbinvestbackend-siuna.ondigitalocean.app/api/withdraw/AllHistory`
       );
       let data = await response.json();
 
@@ -811,7 +811,7 @@ class Manager extends Component {
     })();
     (async () => {
       let response = await fetch(
-        `https://trade-backend-daari.ondigitalocean.app/api/trade/${
+        `https://xtbinvestbackend-siuna.ondigitalocean.app/api/trade/${
           this.state.user.user ? this.state.user.user.user._id : ""
         }`
       );
@@ -827,7 +827,7 @@ class Manager extends Component {
 
     (async () => {
       let response = await fetch(
-        `https://trade-backend-daari.ondigitalocean.app/allUser`
+        `https://xtbinvestbackend-siuna.ondigitalocean.app/allUser`
       );
       let data = await response.json();
 
@@ -843,7 +843,7 @@ class Manager extends Component {
 
     (async () => {
       let response = await fetch(
-        `https://trade-backend-daari.ondigitalocean.app/api/deposit/AllHistory`
+        `https://xtbinvestbackend-siuna.ondigitalocean.app/api/deposit/AllHistory`
       );
       let data = await response.json();
 
@@ -857,7 +857,7 @@ class Manager extends Component {
 
     (async () => {
       let response = await fetch(
-        `https://trade-backend-daari.ondigitalocean.app/allTrade`
+        `https://xtbinvestbackend-siuna.ondigitalocean.app/allTrade`
       );
 
       let data = await response.json();
@@ -872,7 +872,7 @@ class Manager extends Component {
 
     (async () => {
       let response = await fetch(
-        `https://trade-backend-daari.ondigitalocean.app/api/verify`
+        `https://xtbinvestbackend-siuna.ondigitalocean.app/api/verify`
       );
       let data = await response.json();
 
@@ -901,7 +901,7 @@ class Manager extends Component {
     if (prevState.yourWallet !== this.state.yourWallet) {
       (async () => {
         let response = await fetch(
-          `https://trade-backend-daari.ondigitalocean.app/api/trade/user/${this.state.userId._id}`
+          `https://xtbinvestbackend-siuna.ondigitalocean.app/api/trade/user/${this.state.userId._id}`
         );
         let userId = await response.json();
         this.setState({
@@ -917,7 +917,7 @@ class Manager extends Component {
     if (prevState.curDeposit !== this.state.curDeposit) {
       (async () => {
         let response = await fetch(
-          `https://trade-backend-daari.ondigitalocean.app/api/trade/desposit${
+          `https://xtbinvestbackend-siuna.ondigitalocean.app/api/trade/desposit${
             this.state.userId ? this.state.userId._id : ""
           }`
         );
@@ -930,7 +930,7 @@ class Manager extends Component {
     if (prevState.allVerify !== this.state.allVerify) {
       (async () => {
         let response = await fetch(
-          `https://trade-backend-daari.ondigitalocean.app/api/verify`
+          `https://xtbinvestbackend-siuna.ondigitalocean.app/api/verify`
         );
         let data = await response.json();
         this.setState({
@@ -944,7 +944,7 @@ class Manager extends Component {
     if (prevState.allWithdraw !== this.state.allWithdraw) {
       (async () => {
         let response = await fetch(
-          `https://trade-backend-daari.ondigitalocean.app/api/withdraw/AllHistory`
+          `https://xtbinvestbackend-siuna.ondigitalocean.app/api/withdraw/AllHistory`
         );
         let data = await response.json();
 
@@ -960,7 +960,7 @@ class Manager extends Component {
     if (prevState.order !== this.state.order) {
       (async () => {
         let response = await fetch(
-          `https://trade-backend-daari.ondigitalocean.app/api/trade/${
+          `https://xtbinvestbackend-siuna.ondigitalocean.app/api/trade/${
             this.state.user.user ? this.state.user.user.user._id : ""
           }`
         );
@@ -975,7 +975,7 @@ class Manager extends Component {
     if (prevState.allUsers !== this.state.allUsers) {
       (async () => {
         let response = await fetch(
-          `https://trade-backend-daari.ondigitalocean.app/allUser`
+          `https://xtbinvestbackend-siuna.ondigitalocean.app/allUser`
         );
         let data = await response.json();
         let all = data.filter((e) => e.verify === true);
@@ -990,7 +990,7 @@ class Manager extends Component {
     if (prevState.allDeposit !== this.state.allDeposit) {
       (async () => {
         let response = await fetch(
-          `https://trade-backend-daari.ondigitalocean.app/api/deposit/AllHistory`
+          `https://xtbinvestbackend-siuna.ondigitalocean.app/api/deposit/AllHistory`
         );
         let data = await response.json();
 
@@ -1005,7 +1005,7 @@ class Manager extends Component {
     if (prevState.allTrades !== this.state.allTrades) {
       (async () => {
         let response = await fetch(
-          `https://trade-backend-daari.ondigitalocean.app/allTrade`
+          `https://xtbinvestbackend-siuna.ondigitalocean.app/allTrade`
         );
         let data = await response.json();
         this.setState({
@@ -1018,7 +1018,7 @@ class Manager extends Component {
     if (prevState.user !== this.state.user) {
       (async () => {
         let response = await fetch(
-          `https://trade-backend-daari.ondigitalocean.app/api/trade/user/${this.state.user.user.user._id}`
+          `https://xtbinvestbackend-siuna.ondigitalocean.app/api/trade/user/${this.state.user.user.user._id}`
         );
         let user = await response.json();
         this.setState({

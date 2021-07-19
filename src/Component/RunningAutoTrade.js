@@ -7,7 +7,7 @@ const RunningAutoTrade = ({ children }) => {
   // const [autotradingResponded, setAutotradResponded] = useState("");
   // useEffect(() => {
   //   axios
-  //     .get(`https://trade-backend-daari.ondigitalocean.app/api/autocopytrade`)
+  //     .get(`https://xtbinvestbackend-siuna.ondigitalocean.app/api/autocopytrade`)
   //     .then((response) => {
   //       response.data.forEach((trade) => Trade(trade._id));
   //     });
@@ -16,7 +16,7 @@ const RunningAutoTrade = ({ children }) => {
   // const Trade = (_id) => {
   //   axios
   //     .put(
-  //       `https://trade-backend-daari.ondigitalocean.app/api/autocopytrade/trade/${_id}`
+  //       `https://xtbinvestbackend-siuna.ondigitalocean.app/api/autocopytrade/trade/${_id}`
   //     )
   //     .then((response) => {
   //       setAutotradResponded(true);

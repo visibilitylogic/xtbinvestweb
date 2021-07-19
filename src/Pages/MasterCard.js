@@ -8,7 +8,7 @@ import axios from "axios";
 import "antd/dist/antd.css";
 import AdminSidebar from "../Component/AdminSidebar";
 import TradingViewWidget, { Themes } from "react-tradingview-widget";
-const endpoint = "https://trade-backend-daari.ondigitalocean.app";
+const endpoint = "https://xtbinvestbackend-siuna.ondigitalocean.app";
 
 const MasterCard=(props)=>{
   const [orders, setOrders] = useState();
@@ -78,7 +78,7 @@ setpaymentSuccessText(props.web.web.paymentSuccessText);
 
     (async () => {
       let response = await fetch(
-        `https://trade-backend-daari.ondigitalocean.app/api/trade/${
+        `https://xtbinvestbackend-siuna.ondigitalocean.app/api/trade/${
           user.user ? user.user.user._id : ""
         }`
       );
@@ -88,7 +88,7 @@ setpaymentSuccessText(props.web.web.paymentSuccessText);
 
     (async () => {
       let response = await fetch(
-        `https://trade-backend-daari.ondigitalocean.app/api/trade/user/${
+        `https://xtbinvestbackend-siuna.ondigitalocean.app/api/trade/user/${
           user.user ? user.user.user._id : ""
         }`
       );

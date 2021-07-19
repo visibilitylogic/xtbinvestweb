@@ -50,7 +50,7 @@ const General = (props) => {
   const [termsOfServicesLink, settermsOfServicesLink]=useState("")
 
   const [submitLoading, setSubmitLoading] = useState(false);
-  const endpoint = "https://trade-backend-daari.ondigitalocean.app";
+  const endpoint = "https://xtbinvestbackend-siuna.ondigitalocean.app";
   function handleChangeCountry(value) {
     setBlackListedCountry(value);
   }
