@@ -836,11 +836,11 @@ body {
 }
 
 .dash-contents .news-section .tabs .tab.active {
-  border-bottom: 1px solid #4786ff;
+  border-bottom: 1px solid #D44747;
 }
 
 .dash-contents .news-section .tabs .tab.active svg {
-  fill: #4786ff;
+  fill: #D44747;
 }
 
 .dash-contents .news-section .bbc-card {
@@ -2186,7 +2186,7 @@ span.close svg:hover {
 
 .manager-tabs div.active {
   color: #181f2c;
-  border-bottom: 2px solid #4786ff;
+  border-bottom: 2px solid #D44747;
 }
 
 .manager-tabs div span {
@@ -2377,7 +2377,7 @@ span.close svg:hover {
   .image {
   width: 100px;
   height: 100px;
-  background-color: #4786ff;
+  background-color: #D44747;
   border-radius: 50%;
   padding-right: 15px;
   background-size: cover;
@@ -2458,7 +2458,7 @@ span.close svg:hover {
   .country-flag {
   width: 15px;
   height: 15px;
-  background-color: #4786ff;
+  background-color: #D44747;
   border-radius: 50%;
   margin-right: 5px;
   background-size: cover;
@@ -2808,7 +2808,7 @@ span.close svg:hover {
   border-radius: 5px;
   color: #fff;
   font-family: "dash-regular";
-  background-color: #4786ff;
+  background-color: #D44747;
   border: none;
   display: inline-block;
 }
@@ -2895,7 +2895,7 @@ span.close svg:hover {
 .admin-content table tr td .primary-btn {
   padding: 5px 5px;
   border-radius: 2px;
-  background-color: #4786ff;
+  background-color: #D44747;
   color: #fff;
   font-size: 12px;
   text-decoration: none;
@@ -3340,7 +3340,7 @@ span.close svg:hover {
 .withdraw-modal .content .withdraw-method .btn {
   display: inline-block;
   padding: 10px 15px;
-  background-color: #4786ff;
+  background-color: #D44747;
   color: #fff;
   border: none;
   float: right;
@@ -3698,7 +3698,7 @@ span.close svg:hover {
   width: 100%;
   display: block;
   outline: none;
-  background-color: #4786ff;
+  background-color: #D44747;
   color: #fff;
 }
 
@@ -3998,7 +3998,7 @@ span.close svg:hover {
 
 .manager-tabs div.active {
   color: #181f2c;
-  border-bottom: 2px solid #4786ff;
+  border-bottom: 2px solid #D44747;
 }
 
 .manager-tabs div span {
